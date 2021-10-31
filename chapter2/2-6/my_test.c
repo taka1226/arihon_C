@@ -1,22 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 
-int my_gcd(int a, int b){
-    if (b == 0){
-        return a;
-    }
-    return my_gcd(b, a % b);
-}
+int main(void) {
 
-int test_func(int a, int b, int* x, int* y){
-    *x += 3;
-    *y += 4;
-    return a;
-}
-int main(){
-    int x = 1;
-    int y = 4;
-    int c = test_func(1, 3, &x, &y);
+    double num1 = 1.5;
+    double num2 = 2.3;
+
+    double max = fmax(num1, num2);
+
+    printf("max=%f\n", max);
 
     return 0;
 }

@@ -3,7 +3,7 @@
 
 #define MAX_N 101
 #define MAX_V 100000
-#define INF 10000
+#define INF 100000000
 
 typedef long long ll;
 
@@ -32,14 +32,14 @@ int main(){
 
     //dpの初期化
     for (int i=0;i<N;i++){
-        for (int j=0;j<V;j++){
+        for (int j=0;j<=V;j++){
             dp[i][j] = INF;
         }
     }
     dp[0][0] = 0;
 
     for (int i=0;i<N;i++){
-        for (int j=0;j<V;j++){
+        for (int j=0;j<=V;j++){
             if (j < v[i]) dp[i + 1][j] = dp[i][j];
             else{
                 dp[i + 1][j] = min(dp[i][j], dp[i][j - v[i]] + w[i]);

@@ -40,6 +40,6 @@ int main(){
     }
 
 
-    printf("%.2f\n", floor((rb * 100) / 100));
+    printf("%.2f\n", floor(rb * 100) / 100);
     return 0;
 }

@@ -11,7 +11,7 @@ int w[MAX_N], v[MAX_N];
 
 double S[MAX_N];  //vi - x * wi の値を格納する
 
-//      並べ替え基準を示す関数(昇順)
+//降順
 int cmpnum(const void * n1, const void * n2)
 {
         if (*(double *)n1 < *(double *)n2)
